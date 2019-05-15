@@ -1,7 +1,8 @@
 FROM redis:5.0.4-alpine3.9
 
-COPY redis.conf /usr/local/etc/redis/redis.conf
+COPY redis.conf /usr/local/etc/redis/
 
-RUN mkdir /var/run/redis && chown redis:redis /var/run/redis
+COPY docker-child-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-child-entrypoint.sh"]
 
 CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
