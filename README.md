@@ -1,8 +1,8 @@
 # docker-redis-unix-socket
 
-[![](https://images.microbadger.com/badges/image/bohan/redis-unix-socket:5.0.4.svg)](https://hub.docker.com/r/bohan/redis-unix-socket)
+[![](https://images.microbadger.com/badges/image/bohan/redis-unix-socket:5.0.5.svg)](https://hub.docker.com/r/bohan/redis-unix-socket)
 
-    docker run --name redis --restart always -v redis-data:/data -v /var/run/redis:/var/run/redis -d bohan/redis-unix-socket:5.0.4
+    docker run --name redis --restart always -v redis-data:/data -v /var/run/redis:/var/run/redis -d bohan/redis-unix-socket:5.0.5
     
 Connect via unix socket: `/var/run/redis/redis.sock`
 
