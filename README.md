@@ -1,8 +1,10 @@
-# docker-redis-unix-socket
+# docker-redis
 
 [![](https://images.microbadger.com/badges/image/bohan/redis-unix-socket:5.0.5.svg)](https://hub.docker.com/r/bohan/redis-unix-socket)
 
-    docker run --name redis --restart always -v redis-data:/data -v /var/run/redis:/var/run/redis -d bohan/redis-unix-socket:5.0.5
+This Docker image for redis can be configured to listen on unix socket:
+
+    docker run --name redis -v redis-data:/data -v /var/run/redis:/var/run/redis -d bohan/redis-unix-socket:5.0.5 --unixsocket /var/run/redis/redis.sock --unixsocketperm 666
     
 Connect via unix socket: `/var/run/redis/redis.sock`
 
